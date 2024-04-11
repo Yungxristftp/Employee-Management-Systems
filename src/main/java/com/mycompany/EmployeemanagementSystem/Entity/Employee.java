@@ -19,11 +19,11 @@ public class Employee {
 	@Column(name = "last_name")
 	private String lastName;
         
-        @Column(name = "last_name")
-	private String Gender;
+        @Column(name = "gender")
+	private String gender;
         
-        @Column(name = "last_name")
-	private String Salary;
+        @Column(name = "Salary")
+	private double salary;
         
 	@Column(name = "email")
 	private String email;
@@ -36,7 +36,8 @@ public class Employee {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-                this.Gender= gender;
+                this.gender= gender;
+                this.salary= salary;
 		this.email = email;
 	}
 	public Long getId() {
@@ -45,6 +46,15 @@ public class Employee {
 	public void setId(Long id) {
 		this.id = id;
 	}
+     // Getter method for salary    
+         public double getSalary() {
+                return salary;
+    }
+
+    // Setter method for salary
+        public void setSalary(double salary) {
+               this.salary = salary;
+    }
 	public String getFirstName() {
 		return firstName;
 	}
@@ -54,14 +64,14 @@ public class Employee {
 	public String getLastName() {
 		return lastName;
 	}
-	public void setLastName(String gender) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
         public String getgender() {
-            return Gender;
+            return gender;
 	}
 	public void setgender(String gender) {
-            this.Gender = gender;
+            this.gender = gender;
 	}
 	public String getEmail() {
 		return email;
