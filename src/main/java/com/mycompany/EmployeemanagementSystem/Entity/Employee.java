@@ -22,6 +22,9 @@ public class Employee {
         @Column(name = "gender")
 	private String gender;
         
+        @Column(name = "role")
+	private String role;
+        
         @Column(name = "Salary")
 	private double salary;
         
@@ -32,11 +35,12 @@ public class Employee {
 		
 	}
         
-        public Employee(String firstName, String lastName,String gender, String email) {
+        public Employee(String firstName, String lastName,String gender,String role, double salary,String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
                 this.gender= gender;
+                this.role = role;
                 this.salary= salary;
 		this.email = email;
 	}
@@ -73,6 +77,14 @@ public class Employee {
 	public void setgender(String gender) {
             this.gender = gender;
 	}
+        // Getter for role
+        public String getRole() {
+        return role;
+    }
+        // Setter for role
+        public void setRole(String role) {
+        this.role = role;
+    }
 	public String getEmail() {
 		return email;
 	}
