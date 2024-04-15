@@ -21,11 +21,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		super();
 		this.employeeRepository = employeeRepository;
 	}
-//        @Override
-//	public List<Employee> getAllEmployee() {
-//		return employeeRepository.findAll();
-//        }
-
         @Override
 	public Employee saveEmployee(Employee employee) {
 		return employeeRepository.save(employee);
@@ -36,24 +31,19 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return employeeRepository.findById(id).get();
 	}
 
-//	@Override
-//	public Employee updateEpmloyee(Employee employee) {
-//		return employeeRepository.save(employee);
-//	}
-
 	@Override
 	public void deleteEmployeeById(Long id) {
 		employeeRepository.deleteById(id);	
 	}
 
-    @Override
-    public List<Employee> getAllEmployees() {
-       return employeeRepository.findAll();
-    }
+        @Override
+        public List<Employee> getAllEmployees() {
+           return employeeRepository.findAll();
+        }
 
-    @Override
-    public Employee updateEmployee(Employee employee) {
-        return employeeRepository.save(employee);
-    }
+        @Override
+        public Employee updateEmployee(Employee employee) {
+            return employeeRepository.save(employee);
+        }
 
 }

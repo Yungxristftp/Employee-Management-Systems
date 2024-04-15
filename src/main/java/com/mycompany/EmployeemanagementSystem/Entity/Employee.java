@@ -78,11 +78,11 @@ public class Employee {
             this.gender = Gender;
 	}
         // Getter for role
-        public String getRole() {
+        public String getrole() {
         return role;
     }
         // Setter for role
-        public void setRole(String role) {
+        public void setrole(String role) {
         this.role = role;
     }
 	public String getEmail() {

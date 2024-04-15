@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-< <html xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
           xmlns:th="http://www.thymeleaf.org"
-          xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+          xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
     <head>
-        <title>Employee Management System</title>
+        <title> WorkForce Employee Management</title>
         <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -12,6 +12,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#">WorkForce</a>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/employees}">Employee Management</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" th:href="@{/employees}">Management</a>
+                    </li>
+                  </ul>
+                </div>
+        </nav>
         <div class ="container">
 		<div class = "row">
                 <h1> List Employees </h1>
@@ -26,7 +47,7 @@
 				<tr>
 					<th> FirstName</th>
 					<th> LastName</th>
-                                        <th> Role </th>
+<!--                                    <th> Role </th>-->
                                         <th> Salary</th>
                                         <th> Gender </th>
 					<th> Email </th>
@@ -37,17 +58,17 @@
 				<tr th:each = "employee: ${employees}">
 					<td th:text = "${employee.firstName}"></td>
 					<td th:text = "${employee.lastName}"></td>
-                                        <tb th:text = "${employee.role}"></tb>
+<!--                                        <tb th:text = "${employee.role}"></tb>-->
                                         <td th:text = "${employee.salary}"></td>
                                         <td th:text = "${employee.Gender}"></td>
 					<td th:text = "${employee.email}"></td>
 					<td>
-<!--						<a th:href = "@{/employee/edit/{id}(id=${employee.id})}"
+						<a th:href = "@{/employees/edit/{id}(id=${employee.id})}"
 						 class = "btn btn-primary">Update</a>
 						
-						<a th:href = "@{/employee/{id}(id=${employee.id})}"
+						<a th:href = "@{/employees/{id}(id=${employee.id})}"
 						 class = "btn btn-danger">Delete</a>
-						 -->
+						 
 					</td>
 				</tr>
 			</tbody>
