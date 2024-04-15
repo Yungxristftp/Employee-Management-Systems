@@ -37,9 +37,9 @@
 				<tr th:each = "employee: ${employees}">
 					<td th:text = "${employee.firstName}"></td>
 					<td th:text = "${employee.lastName}"></td>
-                                        <tb th:text ="${employee.role}"></tb>
-                                        <td th:text ='$(employee.salary'}></td>
-                                        <td th:text = "${employee.gender}"></td>
+                                        <tb th:text = "${employee.role}"></tb>
+                                        <td th:text = "${employee.salary}"></td>
+                                        <td th:text = "${employee.Gender}"></td>
 					<td th:text = "${employee.email}"></td>
 					<td>
 <!--						<a th:href = "@{/employee/edit/{id}(id=${employee.id})}"
